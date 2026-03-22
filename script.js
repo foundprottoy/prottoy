@@ -1,7 +1,15 @@
 // ===================================
 // PROTTOY PORTFOLIO — script.js
 // ===================================
-
+// === Password Protection ===
+const password = "prottoy2026"; // your password
+const userInput = prompt("🔒 Please enter the password to access this website:");
+if (userInput !== password) {
+  alert("❌ Access denied!");
+  document.body.innerHTML = "<h1 style='color:red; text-align:center; margin-top:50px;'>Access Denied</h1>";
+  throw new Error("Access denied"); // Stop the rest of the script from running
+}
+// ... rest of your existing script.js code continues here
 // === Preloader ===
 window.addEventListener('load', () => {
   document.body.classList.add('loading');
