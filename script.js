@@ -2,14 +2,7 @@
 // PROTTOY PORTFOLIO — script.js
 // ===================================
 // === Password Protection ===
-const password = "prottoy_2026"; // your password
-const userInput = prompt("🔒 Please enter the password to access this website:");
-if (userInput !== password) {
-  alert("❌ Access denied!");
-  document.body.innerHTML = "<h1 style='color:red; text-align:center; margin-top:50px;'>Access Denied</h1>";
-  throw new Error("Access denied"); // Stop the rest of the script from running
-}
-// ... rest of your existing script.js code continues here
+//The page password is made by Cloud_Access.iso 
 // === Preloader ===
 window.addEventListener('load', () => {
   document.body.classList.add('loading');
@@ -246,7 +239,14 @@ const skillObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.3 });
 
 document.querySelectorAll('.skill-category').forEach(el => skillObserver.observe(el));
+const encodedPassword = "cHJvdHRveV8yMDI2";
 
+const userInput = prompt("🔒 Please enter the password to access this website:");
+if (btoa(userInput) !== encodedPassword) {
+  alert("❌ Access denied!");
+  document.body.innerHTML = "<h1 style='color:red; text-align:center; margin-top:50px;'>Access Denied</h1>";
+  throw new Error("Access denied");
+}
 // === Project Filter ===
 const filterBtns = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.project-card');
