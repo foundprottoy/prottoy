@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prottoy — Web Developer & CSE Student</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="preloader">
+  <div class="pre-inner">
+    <span class="pre-letter">P</span>
+    <span class="pre-letter">R</span>
+    <span class="pre-letter">O</span>
+    <span class="pre-letter">T</span>
+    <span class="pre-letter">T</span>
+    <span class="pre-letter">O</span>
+    <span class="pre-letter">Y</span>
+  </div>
+</div>
+
+<!-- Custom Cursor -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Navbar -->
+<nav id="navbar">
+  <div class="nav-brand">
+    <span class="brand-bracket">&lt;</span>Prottoy<span class="brand-bracket">/&gt;</span>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home" class="nav-link active">Home</a></li>
+    <li><a href="#about" class="nav-link">About</a></li>
+    <li><a href="#skills" class="nav-link">Skills</a></li>
+    <li><a href="#projects" class="nav-link">Projects</a></li>
+    <li><a href="#services" class="nav-link">Services</a></li>
+    <li><a href="#links" class="nav-link">Links</a></li>
+    <li><a href="#contact" class="nav-link">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <span class="theme-icon">🌙</span>
+    </button>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== HERO SECTION ===== -->
+<section id="home" class="hero">
+  <canvas id="particleCanvas"></canvas>
+  <div class="hero-content">
+    <div class="hero-text">
+      <p class="hero-greeting fade-up">Hello, World! 👋</p>
+      <h1 class="hero-name fade-up">Prottoy</h1>
+      <div class="hero-role fade-up">
+        <span class="role-static">Web Developer &amp; CSE Student</span>
+      </div>
+      <div class="hero-typed fade-up">
+        <span class="typed-prefix">I'm a </span>
+        <span class="typed-text" id="typedText"></span>
+        <span class="typed-cursor">|</span>
+      </div>
+      <p class="hero-tagline fade-up">Building digital experiences, one line at a time. 🚀</p>
+      <div class="hero-buttons fade-up">
+        <a href="#" class="btn btn-primary" id="downloadCV">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download CV
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Contact Me
+        </a>
+        <a href="https://drive.google.com/drive/folders/1IugkDr9fMcjnfAHMeWlLkbybTCBwzYAo?usp=sharing" class="btn btn-glow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          ⭐ Important Access
+        </a>
+      </div>
+    </div>
+    <div class="hero-image fade-up">
+      <div class="img-frame">
+        <div class="img-glow"></div>
+        <img src="images/profile.png" alt="Prottoy" class="profile-pic" onerror="this.src='https://ui-avatars.com/api/?name=Prottoy&background=0a192f&color=64ffda&size=400&font-size=0.4&bold=true'"/>
+        <div class="img-decoration">
+          <span class="deco-badge badge-1">💻 CSE Student</span>
+          <span class="deco-badge badge-2">🚀 Web Dev</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <span>Scroll Down</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ===== ABOUT SECTION ===== -->
+<section id="about" class="section about">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">// 01. about_me</span>
+      <h2 class="section-title">Who Am I?</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p class="about-bio">
+          <span class="highlight">Im a passionate web developer</span> — আমি ওয়েব ডেভেলপমেন্টকে শুধু কোড লেখা মনে করি না, এটা আমার জন্য শিল্প। I'm <strong>Prottoy</strong>, a Computer Science & Engineering student with a deep love for building clean, functional, and visually stunning web experiences.
+        </p>
+        <p class="about-bio">
+          My journey started with curiosity — breaking websites to understand how they work. Now I build them. From a student who barely knew what HTML was, to crafting full frontend experiences — every project taught me something new.
+        </p>
+        <p class="about-bio">
+          🎯 <strong>Future goal:</strong> Become a full-stack developer, contribute to open source, and build products that matter for people in Bangladesh and beyond.
+        </p>
+        <div class="about-info-grid">
+          <div class="info-item"><span class="info-label">📍 Location</span><span>Dhaka, Bangladesh</span></div>
+          <div class="info-item"><span class="info-label">🎓 Degree</span><span>B.Sc. in CSE</span></div>
+          <div class="info-item"><span class="info-label">🏫 Institute</span><span>Creative IT Institute</span></div>
+          <div class="info-item"><span class="info-label">💼 Status</span><span>Available for Hire</span></div>
+        </div>
+      </div>
+      <div class="about-timeline reveal">
+        <h3 class="timeline-title">My Journey</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <span class="tl-year">2020</span>
+              <h4>Discovered Web Dev</h4>
+              <p>Wrote my first "Hello World" in HTML. Everything changed.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <span class="tl-year">2022</span>
+              <h4>Started CSE</h4>
+              <p>Enrolled in Computer Science & Engineering program.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <span class="tl-year">2023</span>
+              <h4>Built First Projects</h4>
+              <p>Launched multiple real-world web projects including institute sites.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <span class="tl-year">2024</span>
+              <h4>Creative IT Institute</h4>
+              <p>Joined CIT, sharpening skills in modern web technologies.</p>
+            </div>
+          </div>
+          <div class="timeline-item active">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <span class="tl-year">2025+</span>
+              <h4>Full-Stack Goal 🎯</h4>
+              <p>Aiming to master backend, APIs, and ship products globally.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SKILLS SECTION ===== -->
+<section id="skills" class="section skills">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">// 02. skills</span>
+      <h2 class="section-title">What I Know</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-category reveal">
+        <h3>Frontend</h3>
+        <div class="skill-bars">
+          <div class="skill-bar-item" data-skill="HTML5" data-level="92">
+            <div class="skill-info"><span>HTML5</span><span class="skill-pct">92%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="92"></div></div>
+          </div>
+          <div class="skill-bar-item" data-skill="CSS3" data-level="88">
+            <div class="skill-info"><span>CSS3 & SCSS</span><span class="skill-pct">88%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="88"></div></div>
+          </div>
+          <div class="skill-bar-item" data-skill="JavaScript" data-level="75">
+            <div class="skill-info"><span>JavaScript</span><span class="skill-pct">75%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="75"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="skill-category reveal">
+        <h3>Tools & Design</h3>
+        <div class="skill-bars">
+          <div class="skill-bar-item" data-skill="Git" data-level="80">
+            <div class="skill-info"><span>Git & GitHub</span><span class="skill-pct">80%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="80"></div></div>
+          </div>
+          <div class="skill-bar-item" data-skill="Figma" data-level="70">
+            <div class="skill-info"><span>UI/UX Design</span><span class="skill-pct">70%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="70"></div></div>
+          </div>
+          <div class="skill-bar-item" data-skill="Responsive" data-level="85">
+            <div class="skill-info"><span>Responsive Design</span><span class="skill-pct">85%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="85"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tech-badges reveal">
+      <span class="badge">HTML5</span><span class="badge">CSS3</span><span class="badge">JavaScript</span>
+      <span class="badge">Git</span><span class="badge">GitHub</span><span class="badge">Figma</span>
+      <span class="badge">VS Code</span><span class="badge">Responsive</span><span class="badge">UI/UX</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS SECTION ===== -->
+<section id="projects" class="section projects">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">// 03. projects</span>
+      <h2 class="section-title">Things I've Built</h2>
+    </div>
+    <div class="project-filters reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="web">Web</button>
+      <button class="filter-btn" data-filter="design">Design</button>
+      <button class="filter-btn" data-filter="others">Others</button>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card reveal" data-category="web">
+        <div class="project-img">
+          <div class="project-img-placeholder web-bg">🎉</div>
+        </div>
+        <div class="project-content">
+          <span class="project-tag">Web</span>
+          <h3>Eid Salami Website</h3>
+          <p>A fun interactive Eid celebration site where families can send digital salami greetings. Built with HTML, CSS & JS.</p>
+          <div class="project-links">
+            <a href="#" class="project-link demo-link" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Live Demo
+            </a>
+            <a href="#" class="project-link github-link" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card reveal" data-category="design">
+        <div class="project-img">
+          <div class="project-img-placeholder design-bg">🎨</div>
+        </div>
+        <div class="project-content">
+          <span class="project-tag">Design</span>
+          <h3>Morse Code Translator Website Code</h3>
+          <p>A web app that converts text to Morse code and back in real time.</p>
+          <div class="project-links">
+            <a href="https://foundprottoy.github.io/prottoymorse-translator/" class="project-link demo-link" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Live Demo
+            </a>
+            <a href="#" class="project-link github-link" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card reveal" data-category="web">
+        <div class="project-img">
+          <div class="project-img-placeholder institute-bg">🏫</div>
+        </div>
+        <div class="project-content">
+          <span class="project-tag">Web</span>
+          <h3>IT Institute Website</h3>
+          <p>Full website for Creative IT Institute — courses, student portal, responsive layout, and modern UI/UX design.</p>
+          <div class="project-links">
+            <a href="https://foundprottoy.github.io/Infinite-IT-Institute/" class="project-link demo-link" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Live Demo
+            </a>
+            <a href="#" class="project-link github-link" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES SECTION ===== -->
+<section id="services" class="section services">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">// 04. services</span>
+      <h2 class="section-title">What I Offer</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon">🎨</div>
+        <h3>Web Design</h3>
+        <p>Beautiful, pixel-perfect designs that capture your brand identity and engage your audience.</p>
+        <span class="service-price">Starting from $20</span>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">💻</div>
+        <h3>Frontend Development</h3>
+        <p>Clean, responsive, and performant frontends using modern HTML, CSS & JavaScript.</p>
+        <span class="service-price">Starting from $30</span>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🔧</div>
+        <h3>Website Fixing</h3>
+        <p>Debug, optimize, and improve existing websites — responsiveness, bugs, performance.</p>
+        <span class="service-price">Starting from $15</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESUME SECTION ===== -->
+<section id="resume" class="section resume">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">// 05. resume</span>
+      <h2 class="section-title">My Resume</h2>
+    </div>
+    <div class="resume-grid">
+      <div class="resume-col reveal">
+        <h3 class="resume-col-title"><span>🎓</span> Education</h3>
+        <div class="resume-item">
+          <span class="resume-year">2026 – Present</span>
+          <h4>B.Sc. in Computer Science & Engineering</h4>
+          <p>Private University</p>
+        </div>
+        <div class="resume-item">
+          <span class="resume-year">2024 – 2025</span>
+          <h4>HSC — Science</h4>
+          <p>Dhaka, Bangladesh</p>
+        </div>
+      </div>
+      <div class="resume-col reveal">
+        <h3 class="resume-col-title"><span>💼</span> Experience</h3>
+        <div class="resume-item">
+          <span class="resume-year">2026 – Present</span>
+          <h4>Freelance Web Developer</h4>
+          <p>Building responsive websites for local businesses & individuals</p>
+        </div>
+        <div class="resume-item">
+          <span class="resume-year">2027</span>
+          <h4>Web Dev Intern</h4>
+          <p>Creative IT Institute — Frontend projects & UI work</p>
+        </div>
+      </div>
+    </div>
+    <div class="resume-download reveal">
+      <a href="#" class="btn btn-primary btn-lg" id="downloadCV2">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download Full CV (PDF)
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== IMPORTANT LINKS SECTION ===== -->
+<section id="links" class="section imp-links">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">// 06. important_links</span>
+      <h2 class="section-title">⭐ Find Me Here</h2>
+      <p class="section-sub">All my important profiles & contacts in one place</p>
+    </div>
+    <div class="links-grid">
+      <a href="https://github.com/foundprottoy" target="_blank" class="link-card reveal" data-color="#333">
+        <div class="link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+        </div>
+        <div class="link-info">
+          <span class="link-title">💻 GitHub</span>
+          <span class="link-sub">My code & repos</span>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+      <a href="https://www.facebook.com/zh.prottoyexe" target="_blank" class="link-card reveal" data-color="#1877f2">
+        <div class="link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </div>
+        <div class="link-info">
+          <span class="link-title">📘 Facebook</span>
+          <span class="link-sub">Personal profile</span>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+      <a href="https://linkedin.com" target="_blank" class="link-card reveal" data-color="#0a66c2">
+        <div class="link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </div>
+        <div class="link-info">
+          <span class="link-title">💼 LinkedIn</span>
+          <span class="link-sub">Professional network</span>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+      <a href="#home" class="link-card reveal" data-color="#64ffda">
+        <div class="link-icon">🌐</div>
+        <div class="link-info">
+          <span class="link-title">🌐 Portfolio</span>
+          <span class="link-sub">This website</span>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+      <a href="https://mail.google.com/mail/?view=cm&to=mrprottoy.me@gmail.com" class="link-card reveal" data-color="#ea4335">
+        <div class="link-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div class="link-info">
+          <span class="link-title">📧 Gmail</span>
+          <span class="link-sub">mrprottoy.me@gmail.com</span>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+      <a href="https://wa.me" target="_blank" class="link-card reveal" data-color="#25d366">
+        <div class="link-icon">📱</div>
+        <div class="link-info">
+          <span class="link-title">💬 WhatsApp</span>
+          <span class="link-sub">Quick chat</span>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT SECTION ===== -->
+<section id="contact" class="section contact">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">// 07. contact</span>
+      <h2 class="section-title">Let's Talk</h2>
+      <p class="section-sub">Have a project? Want to collaborate? Or just say hi 👋</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-detail">
+          <span class="contact-icon">📧</span>
+          <div>
+            <span class="contact-label">Email</span>
+            <a href="mailto:mrprottoy.me@gmail.com">mrprottoy.me@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <span class="contact-icon">📍</span>
+          <div>
+            <span class="contact-label">Location</span>
+            <span>Dhaka, Bangladesh</span>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <span class="contact-icon">💼</span>
+          <div>
+            <span class="contact-label">Status</span>
+            <span class="status-open">🟢 Open to work</span>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-link" target="_blank" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="#" class="social-link" target="_blank" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="#" class="social-link" target="_blank" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
+      </div>
+      <form class="contact-form reveal" id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" placeholder="Rahat Ahmed" required/>
+          <span class="form-error" id="nameErr">Please enter your name</span>
+        </div>
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" placeholder="rahat@example.com" required/>
+          <span class="form-error" id="emailErr">Please enter a valid email</span>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" placeholder="Hi Prottoy, I'd like to work with you on..." required></textarea>
+          <span class="form-error" id="msgErr">Please write a message</span>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          Send Message
+        </button>
+        <div class="form-success" id="formSuccess">
+          ✅ Message sent! I'll get back to you soon.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="brand-bracket">&lt;</span>Prottoy<span class="brand-bracket">/&gt;</span>
+    </div>
+    <p class="footer-copy">Built with ❤️ by Prottoy &copy; <span id="year"></span></p>
+    <div class="visitor-counter">
+      <span>👀 Visitors: </span><span id="visitCount">0</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
