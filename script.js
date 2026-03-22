@@ -2,7 +2,7 @@
 // PROTTOY PORTFOLIO — script.js
 // ===================================
 // === Password Protection ===
-const password = "prottoy2026"; // your password
+const password = "prottoy_2026"; // your password
 const userInput = prompt("🔒 Please enter the password to access this website:");
 if (userInput !== password) {
   alert("❌ Access denied!");
